@@ -1,0 +1,189 @@
+object Form1: TForm1
+  Left = 1153
+  Height = 491
+  Top = 185
+  Width = 609
+  Caption = 'OpenGL Test'
+  ClientHeight = 491
+  ClientWidth = 609
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object OpenGLControl1: TOpenGLControl
+    Left = 0
+    Height = 491
+    Top = 0
+    Width = 442
+    Align = alClient
+    OnPaint = OpenGLControl1Paint
+    OnResize = OpenGLControl1Resize
+  end
+  object PageControl1: TPageControl
+    Left = 442
+    Height = 491
+    Top = 0
+    Width = 167
+    ActivePage = TabSheet2
+    Align = alRight
+    TabIndex = 1
+    TabOrder = 1
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'Debug 3d Grid Rotation'
+      ClientHeight = 463
+      ClientWidth = 159
+      object TrackBar1: TTrackBar
+        Left = 24
+        Height = 25
+        Top = 24
+        Width = 100
+        Max = 100
+        OnChange = TrackBar1Change
+        Position = 0
+        TabOrder = 0
+      end
+      object TrackBar2: TTrackBar
+        Left = 24
+        Height = 25
+        Top = 96
+        Width = 100
+        Max = 100
+        OnChange = TrackBar2Change
+        Position = 0
+        TabOrder = 1
+      end
+      object TrackBar3: TTrackBar
+        Left = 24
+        Height = 25
+        Top = 168
+        Width = 100
+        Max = 100
+        OnChange = TrackBar3Change
+        Position = 0
+        TabOrder = 2
+      end
+      object Label1: TLabel
+        Left = 24
+        Height = 15
+        Top = 7
+        Width = 19
+        Caption = 'X: 0'
+      end
+      object Label2: TLabel
+        Left = 24
+        Height = 15
+        Top = 77
+        Width = 19
+        Caption = 'Y: 0'
+      end
+      object Label3: TLabel
+        Left = 24
+        Height = 15
+        Top = 150
+        Width = 19
+        Caption = 'Z: 0'
+      end
+      object TrackBar4: TTrackBar
+        Left = 24
+        Height = 25
+        Top = 240
+        Width = 100
+        Max = 360
+        OnChange = TrackBar4Change
+        Position = 0
+        TabOrder = 3
+      end
+      object Label4: TLabel
+        Left = 24
+        Height = 15
+        Top = 216
+        Width = 20
+        Caption = 'A: 0'
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Color Picker'
+      ClientHeight = 463
+      ClientWidth = 159
+      object OpenGLControl2: TOpenGLControl
+        Left = 16
+        Height = 128
+        Top = 32
+        Width = 128
+        OnPaint = OpenGLControl2Paint
+        OnResize = OpenGLControl2Resize
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 15
+        Top = 12
+        Width = 41
+        Caption = 'Preview'
+      end
+      object TrackBar5: TTrackBar
+        Left = 16
+        Height = 25
+        Top = 192
+        Width = 100
+        Max = 1000
+        OnChange = TrackBar5Change
+        Position = 0
+        TabOrder = 1
+      end
+      object TrackBar6: TTrackBar
+        Left = 16
+        Height = 25
+        Top = 248
+        Width = 100
+        Max = 1000
+        OnChange = TrackBar6Change
+        Position = 0
+        TabOrder = 2
+      end
+      object TrackBar7: TTrackBar
+        Left = 16
+        Height = 25
+        Top = 304
+        Width = 100
+        Max = 1000
+        OnChange = TrackBar7Change
+        Position = 0
+        TabOrder = 3
+      end
+      object Label6: TLabel
+        Left = 16
+        Height = 15
+        Top = 176
+        Width = 35
+        Caption = '0 - Rot'
+      end
+      object Label7: TLabel
+        Left = 16
+        Height = 15
+        Top = 230
+        Width = 49
+        Caption = '0 - Gruen'
+      end
+      object Label8: TLabel
+        Left = 16
+        Height = 15
+        Top = 288
+        Width = 40
+        Caption = '0 - Blau'
+      end
+      object Button1: TButton
+        Left = 16
+        Height = 25
+        Top = 352
+        Width = 75
+        Caption = 'Kopieren'
+        OnClick = Button1Click
+        TabOrder = 4
+      end
+    end
+  end
+  object OnApp: TApplicationProperties
+    OnIdle = OnAppIdle
+    Left = 24
+    Top = 200
+  end
+end
